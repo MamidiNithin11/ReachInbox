@@ -1,0 +1,43 @@
+{
+  "name": "reachinbox-onebox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec node src/index.js",
+    "lint": "echo \"add eslint later\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@elastic/elasticsearch": "^9.1.1",
+    "@google/generative-ai": "^0.24.1",
+    "axios-retry": "^4.5.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "html-to-text": "^9.0.5",
+    "imapflow": "^1.0.200",
+    "mailparser": "^3.7.5",
+    "node-fetch": "^3.3.2",
+    "p-retry": "^7.1.0",
+    "pino": "^10.1.0",
+    "qdrant-client": "^0.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "uuid": "^13.0.0",
+    "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.8.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
