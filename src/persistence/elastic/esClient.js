@@ -1,10 +1,8 @@
-// src/persistence/elastic/esClient.js
 import { Client } from "@elastic/elasticsearch";
 import pRetry from "p-retry";
 import { config } from "../../config/index.js";
 
 export const esClient = new Client({ node: config.elastic.host });
-
 export async function ensureElasticsearchConnection() {
   await pRetry(
     async () => {

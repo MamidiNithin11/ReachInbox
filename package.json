@@ -2,11 +2,13 @@
   "name": "reachinbox-onebox",
   "version": "1.0.0",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start:clean": "node src/index.js 2>&1 | findstr /V /C:\"level\" /C:\"component\" /C:\"FETCH\" /C:\"ENVELOPE\" /C:\"imap-connection\"",
     "dev": "nodemon --watch src --exec node src/index.js",
-    "lint": "echo \"add eslint later\""
+    "lint": "echo \"add eslint later\"",
+    "test:hugging": "node testing.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,8 @@
   "dependencies": {
     "@elastic/elasticsearch": "^9.1.1",
     "@google/generative-ai": "^0.24.1",
+    "@huggingface/inference": "^4.11.3",
+    "axios": "^1.12.2",
     "axios-retry": "^4.5.0",
     "compression": "^1.8.1",
     "cors": "^2.8.5",

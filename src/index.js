@@ -16,8 +16,7 @@ async function bootstrap() {
   await imapManager.startAll();
 
   app.listen(PORT, () => {
-    console.log(`🚀 ReachInbox Onebox running on port ${PORT}`);
+    console.log(`🚀ReachInbox Onebox running on port http://localhost:${PORT}`);
   });
 }
-
 bootstrap().catch(err => console.error("Startup failure:", err));

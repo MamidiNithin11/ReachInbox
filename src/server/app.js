@@ -14,7 +14,6 @@ app.use(helmet());
 app.use(compression());
 app.use(express.json());
 
-
 app.get("/api/health", (_req, res) => {
   res.status(200).json({
     status: "ok",
